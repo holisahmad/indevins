@@ -1,0 +1,7 @@
+# Folder materi kerja — jangan di-commit (bukan bagian website)
+data/
+UI_Design_Intelligence_Pack/
+
+# Sistem & aplikasi
+.DS_Store
+.freebuff/
