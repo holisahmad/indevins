@@ -6,9 +6,10 @@ Website resmi company profile **PT Indonesia Development Inspire**: lembaga peng
 
 ## Fitur
 
-- Satu halaman (single page) dengan 6 section: **Hero, Tentang Kami, Visi & Misi, Divisi, Ruang Kami (galeri), Struktur Manajemen, Kontak**.
+- Satu halaman (single page) dengan **topbar kontak, hero slider 3 slide (otomatis + panah/tombol), Tentang, Visi & Misi, Divisi (kartu layanan), Jadwal Pelatihan, Ruang Kami (galeri), Struktur Manajemen, Kontak, footer 3 kolom**, serta **tombol WhatsApp mengambang**.
+- **Jadwal pelatihan mudah diedit** tanpa menyentuh HTML: cukup ubah `assets/js/jadwal.js` (panduan di [TUTORIAL.md](TUTORIAL.md)). Jika kosong, halaman menampilkan pesan "Belum ada jadwal terbaru" — tanpa data fiktif.
 - Desain editorial *ink-on-paper* dengan aksen perunggu yang diambil dari logo resmi — bukan template generik.
-- 5 divisi (Training Center, Web & Technology, Business Consulting, Creative Studio, Digital Marketing) disajikan sebagai indeks bernomor.
+- 5 divisi (Training Center, Web & Technology, Business Consulting, Creative Studio, Digital Marketing) disajikan sebagai kartu layanan berfoto ala situs lembaga pelatihan profesional.
 - Kontak siap pakai: tombol WhatsApp, email, telepon, dan Google Maps.
 - **Mobile-first**, responsif dari 360px hingga layar lebar.
 - Aksesibilitas: landmark HTML, skip link, fokus keyboard terlihat, kontras lolos WCAG AA, dukungan *reduced motion*.

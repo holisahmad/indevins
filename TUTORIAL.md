@@ -143,7 +143,7 @@ Seluruh teks berada di `index.html`. Peta section:
 | Bagian di halaman | Kata kunci cari di `index.html` |
 |---|---|
 | Judul browser & SEO | `<title>` dan `<meta name="description">` di `<head>` |
-| Hero (judul besar) | `id="hero-title"` |
+| Hero (slider 3 slide, judul besar) | `id="hero"`, slide di dalam `[data-slide]` |
 | Tentang Kami | `id="tentang"` |
 | Visi & Misi | `id="visi-misi"` (8 poin `<li>` pada `.misi-list`) |
 | Divisi | `id="divisi"` (baris `.division-row`) |
@@ -174,6 +174,57 @@ sips -s format jpeg -s formatOptions 75 -Z 1600 foto_asli.jpg --out assets/img/h
 ### Warna & font
 
 Semua warna, ukuran teks, dan jarak didefinisikan sebagai variabel di bagian atas `assets/css/styles.css` (blok `:root`), mis. `--color-ink`, `--color-accent`. Ubah nilai di sana untuk mengganti tampilan seluruh website secara konsisten.
+
+### Menambah / mengubah jadwal pelatihan
+
+Contoh kasus: *training A di kota B pada waktu C*. Semua jadwal dikelola di **satu file**: `assets/js/jadwal.js`. Tidak perlu menyentuh `index.html`.
+
+1. Buka `assets/js/jadwal.js` di editor teks.
+2. Salin satu blok `{ ... }` dari template yang sudah ada di dalamnya.
+3. Isi sesuai kebutuhan:
+
+| Field | Isi | Contoh |
+|---|---|---|
+| `nama` | Nama kegiatan | `"Pelatihan Digital Marketing"` |
+| `kota` | Kota / mode | `"Yogyakarta"` atau `"Online (Zoom)"` |
+| `tanggal` | Tanggal mulai `YYYY-MM-DD` (untuk urutan otomatis) | `"2026-12-10"` |
+| `tanggalTampil` | Teks yang dibaca pengunjung | `"10–12 Desember 2026"` |
+| `status` | `"daftar"` (tombol Daftar aktif) atau `"penuh"` | `"daftar"` |
+| `catatan` | Keterangan opsional (`""` jika kosong) | `"Early bird sampai 1 Desember"` |
+
+4. Simpan file → refresh website (`Cmd/Ctrl + Shift + R`).
+5. Setelah puas, commit & push (lihat [bagian 3](#3-menerbitkan-ke-internet-production)); GitHub Pages membangun ulang otomatis dalam ±1 menit.
+
+Catatan:
+- Tombol **Daftar** pada baris jadwal otomatis membuka WhatsApp dengan pesan yang sudah memuat nama training dan tanggalnya.
+- Jika semua data dikosongkan (`[]`), halaman menampilkan pesan "Belum ada jadwal terbaru" — bukan error, dan bukan data palsu.
+- Urutan tampil otomatis mengikuti tanggal terbaru.
+
+### Publikasi ke media sosial
+
+Agar informasi di website dan media sosial selalu konsisten, jadikan `assets/js/jadwal.js` sebagai **satu-satunya sumber kebenaran**, lalu salin dari sana:
+
+1. Buka `assets/js/jadwal.js`, salin info training yang akan diumumkan.
+2. Gunakan template caption berikut (isi `[... ]`):
+
+   ```
+   📢 [Nama Training]
+   📍 [Kota]
+   📅 [Tanggal]
+
+   Kuota terbatas — daftar sekarang via WhatsApp:
+   wa.me/6281215400332
+
+   Info lengkap & jadwal lainnya:
+   [alamat website]/#jadwal
+   ```
+
+3. Posting di Instagram/Facebook/TikTok, lalu sematkan (pinned) atau masukkan ke Story dengan stiker tautan menuju `/#jadwal`.
+4. Setelah kuota penuh, ubah `status` di `assets/js/jadwal.js` menjadi `"penuh"`, push, lalu update postingan media sosial terkait.
+
+Tips:
+- Konsistensi tanggal & kota antar-kanal terjamin karena semuanya disalin dari satu file.
+- Saat akun media sosial IDI sudah resmi, tautan sosial dapat ditambahkan ke footer (hubungi developer atau minta dibuatkan).
 
 ---
 

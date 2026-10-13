@@ -36,6 +36,19 @@
 <body>
 <a class="skip-link" href="#konten">Lompat ke konten utama</a>
 
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <p class="topbar-contact">
+      <span class="topbar-label">Hubungi kami</span>
+      <a href="tel:+6281215400332">0812-1540-0332</a>
+      <span aria-hidden="true">|</span>
+      <a href="mailto:ptindevinsjogja@gmail.com">ptindevinsjogja@gmail.com</a>
+    </p>
+  </div>
+</div>
+
+<!-- HEADER -->
 <header class="site-header" id="atas">
   <div class="container header-inner">
     <a class="brand" href="#atas">
@@ -56,6 +69,7 @@
         <li><a href="#tentang">Tentang</a></li>
         <li><a href="#visi-misi">Visi &amp; Misi</a></li>
         <li><a href="#divisi">Divisi</a></li>
+        <li><a href="#jadwal">Jadwal</a></li>
         <li><a href="#ruang-kami">Ruang Kami</a></li>
         <li><a href="#struktur">Struktur</a></li>
         <li><a href="#kontak" class="nav-cta">Kontak</a></li>
@@ -66,43 +80,80 @@
 
 <main id="konten">
 
-  <!-- HERO -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Lembaga Pengembangan · Bantul, Yogyakarta</p>
-        <h1 id="hero-title">Membangun Negeri dengan Inovasi.</h1>
-        <p class="lede">Indonesia Development Inspire membantu individu, pelaku usaha, UMKM, perusahaan, dan organisasi meningkatkan kapasitas serta daya saing di era digital — melalui pelatihan, konsultasi bisnis, teknologi, dan industri kreatif.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#divisi">Lihat lima divisi kami <span aria-hidden="true">→</span></a>
-          <a class="btn btn-ghost" href="#kontak">Hubungi kami</a>
+  <!-- HERO SLIDER -->
+  <section class="hero-slider" id="hero" aria-roledescription="carousel" aria-label="Sorotan IDI" data-slider>
+    <div class="slides" data-slides>
+      <div class="slide is-active" data-slide role="group" aria-roledescription="slide" aria-label="1 dari 3">
+        <img src="assets/img/g-pelatihan.jpg" alt="" width="1200" height="800" fetchpriority="high">
+        <div class="container slide-content">
+          <p class="eyebrow">Lembaga Pengembangan · Bantul, Yogyakarta</p>
+          <h1>Membangun Negeri dengan Inovasi.</h1>
+          <p class="lede">Indonesia Development Inspire membantu individu, pelaku usaha, UMKM, perusahaan, dan organisasi meningkatkan kapasitas serta daya saing di era digital.</p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="#divisi">Lihat lima divisi kami <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline" href="#kontak">Hubungi kami</a>
+          </div>
         </div>
       </div>
 
-      <figure class="hero-figure">
-        <img src="assets/img/hero.jpg" alt="Fasilitator memandu sesi pelatihan di hadapan peserta" width="1068" height="1600">
-        <figcaption>Pelatihan, konsultasi, teknologi, dan kreativitas — satu ekosistem pengembangan.</figcaption>
-      </figure>
+      <div class="slide" data-slide role="group" aria-roledescription="slide" aria-label="2 dari 3" aria-hidden="true">
+        <img src="assets/img/g-presentasi.jpg" alt="" width="1200" height="800" loading="lazy">
+        <div class="container slide-content">
+          <p class="eyebrow">Indonesia Training Center</p>
+          <h2>Pelatihan yang relevan dengan dunia kerja.</h2>
+          <p class="lede">Pelatihan berkualitas untuk profesional, UMKM, dan korporasi — dari digital marketing hingga AI &amp; teknologi, disusun mengikuti kebutuhan industri terkini.</p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="#divisi">Program pelatihan <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" data-slide role="group" aria-roledescription="slide" aria-label="3 dari 3" aria-hidden="true">
+        <img src="assets/img/g-konsultasi.jpg" alt="" width="1200" height="800" loading="lazy">
+        <div class="container slide-content">
+          <p class="eyebrow">Konsultasi · Teknologi · Kreatif</p>
+          <h2>Solusi terintegrasi untuk bisnis Anda.</h2>
+          <p class="lede">Konsultasi dan pendampingan usaha, pengembangan website &amp; aplikasi, serta produksi konten kreatif — satu ekosistem untuk pertumbuhan bisnis Anda.</p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="#kontak">Diskusikan kebutuhan Anda <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="container">
-      <ul class="hero-facts reveal" aria-label="Ringkasan perusahaan">
-        <li><span class="fact-value">5</span><span class="fact-label">Divisi terpadu</span></li>
-        <li><span class="fact-value">8</span><span class="fact-label">Sasaran misi</span></li>
-        <li><span class="fact-value">4</span><span class="fact-label">Bidang: SDM, bisnis, teknologi, kreatif</span></li>
-        <li><span class="fact-value">DIY</span><span class="fact-label">Bantul · Yogyakarta</span></li>
-      </ul>
+    <div class="slider-ui">
+      <button class="slider-arrow" type="button" data-prev aria-label="Slide sebelumnya"><span aria-hidden="true">←</span></button>
+      <div class="slider-dots" aria-label="Pilih slide" data-dots></div>
+      <button class="slider-arrow" type="button" data-next aria-label="Slide berikutnya"><span aria-hidden="true">→</span></button>
     </div>
   </section>
+
+  <!-- RINGKASAN -->
+  <div class="container">
+    <ul class="hero-facts reveal" aria-label="Ringkasan perusahaan">
+      <li><span class="fact-value">5</span><span class="fact-label">Divisi terpadu</span></li>
+      <li><span class="fact-value">8</span><span class="fact-label">Sasaran misi</span></li>
+      <li><span class="fact-value">4</span><span class="fact-label">Bidang: SDM, bisnis, teknologi, kreatif</span></li>
+      <li><span class="fact-value">DIY</span><span class="fact-label">Bantul · Yogyakarta</span></li>
+    </ul>
+  </div>
 
   <!-- 01 TENTANG -->
   <section class="section" id="tentang" aria-labelledby="tentang-title">
     <div class="container">
       <p class="section-marker"><span class="marker-num">01</span> Tentang Kami</p>
+
+      <div class="intro-centered reveal">
+        <p class="intro-kicker">Indonesia Development Inspire (IDI)</p>
+        <h2 id="tentang-title" class="title-two">Lembaga yang <span>bertumbuh bersama manusianya.</span></h2>
+        <hr class="intro-rule">
+        <p class="intro-text">IDI hadir mendukung peningkatan kompetensi sumber daya manusia, pengembangan usaha, pemanfaatan teknologi, serta pertumbuhan organisasi dan masyarakat di Indonesia — untuk individu, pelaku usaha, UMKM, perusahaan, lembaga pendidikan, maupun organisasi.</p>
+      </div>
+
       <div class="split reveal">
         <div class="split-aside">
-          <h2 id="tentang-title">Lembaga yang bertumbuh bersama manusianya.</h2>
-          <p class="aside-note">Indonesia Development Inspire (IDI) hadir sebagai lembaga yang berkomitmen mendukung peningkatan kompetensi sumber daya manusia, pengembangan usaha, pemanfaatan teknologi, serta pertumbuhan organisasi dan masyarakat di Indonesia.</p>
+          <h3>Satu ekosistem pengembangan</h3>
+          <p class="aside-note">IDI mengintegrasikan pendidikan dan pelatihan, pengembangan teknologi, konsultasi bisnis, pendampingan UMKM, industri kreatif, serta layanan digital dalam satu ekosistem yang saling terhubung.</p>
         </div>
         <div class="split-main prose">
           <p class="dropcap">Perkembangan dunia kerja dan bisnis yang semakin dinamis menuntut setiap individu dan organisasi untuk terus belajar, beradaptasi, dan meningkatkan kemampuan. Kemajuan teknologi digital, perubahan kebutuhan industri, serta berkembangnya kewirausahaan menciptakan peluang sekaligus tantangan yang membutuhkan solusi yang praktis, inovatif, dan berkelanjutan.</p>
@@ -146,13 +197,18 @@
   <section class="section" id="divisi" aria-labelledby="divisi-title">
     <div class="container">
       <p class="section-marker"><span class="marker-num">03</span> Divisi</p>
-      <h2 class="section-title" id="divisi-title">Lima divisi, satu alur pengembangan.</h2>
-      <p class="section-intro">Dari peningkatan kapasitas manusia hingga kehadiran digital — setiap kebutuhan pengembangan dijawab oleh divisi yang memang berkecimpung di dalamnya.</p>
+      <div class="intro-centered reveal">
+        <p class="intro-kicker">Layanan Kami</p>
+        <h2 id="divisi-title" class="title-two">Lima divisi, <span>satu alur pengembangan.</span></h2>
+        <hr class="intro-rule">
+        <p class="intro-text">Dari peningkatan kapasitas manusia hingga kehadiran digital — setiap kebutuhan pengembangan dijawab oleh divisi yang memang berkecimpung di dalamnya.</p>
+      </div>
 
-      <ul class="division-index reveal">
-        <li class="division-row">
-          <span class="division-num" aria-hidden="true">01</span>
-          <div class="division-body">
+      <ul class="division-grid reveal">
+        <li class="division-card">
+          <img src="assets/img/g-pelatihan.jpg" alt="Sesi pelatihan dengan fasilitator di depan peserta" width="1200" height="800" loading="lazy">
+          <div class="card-body">
+            <p class="card-num" aria-hidden="true">01</p>
             <h3>Indonesia Training Center</h3>
             <ul class="tags">
               <li>Pelatihan Profesional</li>
@@ -161,11 +217,13 @@
               <li>AI &amp; Teknologi</li>
               <li>Corporate Training</li>
             </ul>
+            <a class="card-link" href="#kontak">Konsultasi layanan ini <span aria-hidden="true">→</span></a>
           </div>
         </li>
-        <li class="division-row">
-          <span class="division-num" aria-hidden="true">02</span>
-          <div class="division-body">
+        <li class="division-card">
+          <img src="assets/img/g-teknologi.jpg" alt="Tim mendiskusikan pengembangan aplikasi di depan komputer" width="801" height="1200" loading="lazy">
+          <div class="card-body">
+            <p class="card-num" aria-hidden="true">02</p>
             <h3>Indonesia Web &amp; Technology</h3>
             <ul class="tags">
               <li>Website Development</li>
@@ -173,11 +231,13 @@
               <li>Mobile Application</li>
               <li>Maintenance &amp; Hosting</li>
             </ul>
+            <a class="card-link" href="#kontak">Konsultasi layanan ini <span aria-hidden="true">→</span></a>
           </div>
         </li>
-        <li class="division-row">
-          <span class="division-num" aria-hidden="true">03</span>
-          <div class="division-body">
+        <li class="division-card">
+          <img src="assets/img/g-konsultasi.jpg" alt="Diskusi kelompok bersama konsultan di ruang rapat" width="1200" height="800" loading="lazy">
+          <div class="card-body">
+            <p class="card-num" aria-hidden="true">03</p>
             <h3>Indonesia Business Consulting</h3>
             <ul class="tags">
               <li>Konsultasi Bisnis</li>
@@ -185,11 +245,13 @@
               <li>Business Plan</li>
               <li>Digital Transformation</li>
             </ul>
+            <a class="card-link" href="#kontak">Konsultasi layanan ini <span aria-hidden="true">→</span></a>
           </div>
         </li>
-        <li class="division-row">
-          <span class="division-num" aria-hidden="true">04</span>
-          <div class="division-body">
+        <li class="division-card">
+          <img src="assets/img/g-kreatif.jpg" alt="Tim kreatif mengerjakan desain di studio" width="801" height="1200" loading="lazy">
+          <div class="card-body">
+            <p class="card-num" aria-hidden="true">04</p>
             <h3>Indonesia Creative Studio</h3>
             <ul class="tags">
               <li>Animasi</li>
@@ -197,11 +259,13 @@
               <li>Video Production</li>
               <li>Motion Graphic</li>
             </ul>
+            <a class="card-link" href="#kontak">Konsultasi layanan ini <span aria-hidden="true">→</span></a>
           </div>
         </li>
-        <li class="division-row">
-          <span class="division-num" aria-hidden="true">05</span>
-          <div class="division-body">
+        <li class="division-card">
+          <img src="assets/img/g-presentasi.jpg" alt="Presenter menyampaikan materi di depan ruangan" width="1200" height="800" loading="lazy">
+          <div class="card-body">
+            <p class="card-num" aria-hidden="true">05</p>
             <h3>Indonesia Digital Marketing</h3>
             <ul class="tags">
               <li>Social Media Management</li>
@@ -209,17 +273,38 @@
               <li>SEO</li>
               <li>Advertising</li>
             </ul>
+            <a class="card-link" href="#kontak">Konsultasi layanan ini <span aria-hidden="true">→</span></a>
           </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- 04 RUANG KAMI -->
-  <section class="section section-alt" id="ruang-kami" aria-labelledby="ruang-title">
+  <!-- 04 JADWAL -->
+  <section class="section section-alt" id="jadwal" aria-labelledby="jadwal-title">
     <div class="container">
-      <p class="section-marker"><span class="marker-num">04</span> Ruang Kami</p>
-      <h2 class="section-title" id="ruang-title">Di mana ilmu dipraktikkan.</h2>
+      <p class="section-marker"><span class="marker-num">04</span> Jadwal Pelatihan</p>
+      <div class="intro-centered reveal">
+        <p class="intro-kicker">Kelas Terbuka</p>
+        <h2 id="jadwal-title" class="title-two">Jadwal pelatihan <span>terbaru.</span></h2>
+        <hr class="intro-rule">
+        <p class="intro-text">Kelas terbuka untuk umum — kota, tanggal, dan pendaftaran ada di sini. Untuk pelatihan in-house di perusahaan Anda, hubungi kami untuk penjadwalan khusus.</p>
+      </div>
+      <div class="jadwal-wrap reveal" data-jadwal aria-live="polite">
+        <noscript><p class="jadwal-kosong">Aktifkan JavaScript untuk melihat jadwal, atau hubungi kami untuk informasi jadwal terbaru.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 RUANG KAMI -->
+  <section class="section" id="ruang-kami" aria-labelledby="ruang-title">
+    <div class="container">
+      <p class="section-marker"><span class="marker-num">05</span> Ruang Kami</p>
+      <div class="intro-centered reveal">
+        <p class="intro-kicker">Dokumentasi</p>
+        <h2 id="ruang-title" class="title-two">Di mana <span>ilmu dipraktikkan.</span></h2>
+        <hr class="intro-rule">
+      </div>
 
       <div class="gallery reveal">
         <figure class="gal gal-wide">
@@ -227,22 +312,18 @@
           <figcaption>Indonesia Training Center — pelatihan profesional &amp; UMKM</figcaption>
         </figure>
         <figure class="gal">
-          <img src="assets/img/g-teknologi.jpg" alt="Tim mendiskusikan pengembangan aplikasi di depan komputer" width="801" height="1200" loading="lazy">
-          <figcaption>Indonesia Web &amp; Technology — solusi digital</figcaption>
-        </figure>
-        <figure class="gal">
-          <img src="assets/img/g-konsultasi.jpg" alt="Diskusi kelompok bersama konsultan di ruang rapat" width="1200" height="800" loading="lazy">
-          <figcaption>Indonesia Business Consulting — konsultasi &amp; pendampingan</figcaption>
+          <img src="assets/img/hero.jpg" alt="Fasilitator memandu sesi pelatihan di hadapan peserta" width="1068" height="1600" loading="lazy">
+          <figcaption>Suasana pelatihan bersama IDI</figcaption>
         </figure>
         <figure class="gal gal-tall">
           <img src="assets/img/g-kreatif.jpg" alt="Tim kreatif mengerjakan desain di studio" width="801" height="1200" loading="lazy">
           <figcaption>Indonesia Creative Studio — desain, animasi, video</figcaption>
         </figure>
         <figure class="gal">
-          <img src="assets/img/g-presentasi.jpg" alt="Presenter menyampaikan materi di depan ruangan" width="1200" height="800" loading="lazy">
-          <figcaption>Seminar &amp; workshop</figcaption>
+          <img src="assets/img/g-teknologi.jpg" alt="Tim mendiskusikan pengembangan aplikasi di depan komputer" width="801" height="1200" loading="lazy">
+          <figcaption>Indonesia Web &amp; Technology — solusi digital</figcaption>
         </figure>
-        <figure class="gal gal-wide">
+        <figure class="gal">
           <img src="assets/img/g-dokumentasi.jpg" alt="Rangkuman foto kegiatan pelatihan dan workshop" width="1200" height="800" loading="lazy">
           <figcaption>Dokumentasi kegiatan pelatihan</figcaption>
         </figure>
@@ -253,7 +334,7 @@
   <!-- 05 STRUKTUR -->
   <section class="section" id="struktur" aria-labelledby="struktur-title">
     <div class="container">
-      <p class="section-marker"><span class="marker-num">05</span> Struktur Manajemen</p>
+      <p class="section-marker"><span class="marker-num">06</span> Struktur Manajemen</p>
       <div class="split split-reverse reveal">
         <div class="split-aside">
           <h2 id="struktur-title">Pengelolaan yang tertata.</h2>
@@ -271,7 +352,7 @@
   <!-- 06 KONTAK -->
   <section class="section section-dark" id="kontak" aria-labelledby="kontak-title">
     <div class="container">
-      <p class="section-marker"><span class="marker-num">06</span> Kontak</p>
+      <p class="section-marker"><span class="marker-num">07</span> Kontak</p>
       <div class="kontak-grid reveal">
         <div class="kontak-copy">
           <h2 id="kontak-title">Mari mulai percakapan.</h2>
@@ -304,27 +385,50 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
+  <div class="container footer-grid">
     <div class="footer-brand">
-      <img src="assets/img/logo.png" alt="" width="40" height="39" loading="lazy">
+      <img src="assets/img/logo.png" alt="" width="52" height="50" loading="lazy">
       <div>
         <strong>PT Indonesia Development Inspire</strong>
         <p>Membangun Negeri dengan Inovasi.</p>
       </div>
     </div>
+
     <nav aria-label="Navigasi footer">
+      <h2 class="footer-heading">Menu</h2>
       <ul class="footer-nav">
         <li><a href="#tentang">Tentang</a></li>
         <li><a href="#visi-misi">Visi &amp; Misi</a></li>
         <li><a href="#divisi">Divisi</a></li>
+        <li><a href="#jadwal">Jadwal</a></li>
         <li><a href="#ruang-kami">Ruang Kami</a></li>
+        <li><a href="#struktur">Struktur</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
     </nav>
+
+    <div class="footer-contact">
+      <h2 class="footer-heading">Kontak</h2>
+      <address>
+        Bintaran Kulon RT 003, RW 001, Srimulyo, Piyungan,<br>
+        Kabupaten Bantul, DI Yogyakarta 55792
+      </address>
+      <p><a href="tel:+6281215400332">0812-1540-0332</a> · <a href="tel:+628179406963">0817-9406-963</a></p>
+      <p><a href="mailto:ptindevinsjogja@gmail.com">ptindevinsjogja@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="container footer-meta-row">
     <p class="footer-meta">© <span id="tahun">2026</span> PT Indonesia Development Inspire · Bantul, Yogyakarta</p>
   </div>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<!-- WhatsApp mengambang -->
+<a class="wa-float" href="https://wa.me/6281215400332?text=Halo%20IDI%2C%20saya%20ingin%20konsultasi%20tentang%20program%20Anda." target="_blank" rel="noopener" aria-label="Chat WhatsApp IDI di 0812-1540-0332">
+  <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.06 3 3.4 8.66 3.4 15.64c0 2.23.58 4.4 1.69 6.32L3.3 28.7l6.92-1.75a12.6 12.6 0 0 0 5.82 1.42h.01c6.98 0 12.64-5.66 12.64-12.64S23.02 3 16.04 3zm0 23.02h-.01a10.5 10.5 0 0 1-5.35-1.47l-.38-.23-3.98 1 1.06-3.88-.25-.4a10.46 10.46 0 0 1-1.61-5.6c0-5.81 4.73-10.54 10.54-10.54 2.81 0 5.46 1.1 7.45 3.09a10.47 10.47 0 0 1 3.09 7.46c0 5.81-4.73 10.54-10.54 10.54zm5.78-7.9c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.5.14-.66.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.71-.55l-.61-.01c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65s1.14 3.08 1.3 3.29c.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.77 2.14-1.51.26-.74.26-1.38.18-1.51-.08-.13-.29-.21-.61-.37z"/></svg>
+  <span class="wa-float-text">WhatsApp</span>
+</a>
+
+<script src="assets/js/jadwal.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
