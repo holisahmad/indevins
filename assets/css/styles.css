@@ -657,6 +657,7 @@ blockquote p {
 .gal-wide { grid-column: span 4; }
 .gal-tall { grid-row: span 2; }
 .gal img {
+  display: block;
   width: 100%;
   height: 100%;
   min-height: 14rem;
@@ -667,7 +668,11 @@ blockquote p {
   transition: filter var(--dur) var(--ease);
 }
 .gal:hover img { filter: saturate(1.05); }
-.gal figcaption { margin-top: var(--space-2); }
+.gal figcaption {
+  display: block;
+  clear: both;
+  margin-top: var(--space-2);
+}
 
 /* Struktur */
 .struktur-figure { margin: 0; }
