@@ -143,8 +143,8 @@
   lbNext.setAttribute('aria-label', 'Gambar berikutnya');
   lbNext.textContent = '›';
 
-  lightbox.appendChild(lbPrev);
   lightbox.appendChild(lbImg);
+  lightbox.appendChild(lbPrev);
   lightbox.appendChild(lbNext);
   lightbox.appendChild(lbCaption);
   lightbox.appendChild(lbClose);

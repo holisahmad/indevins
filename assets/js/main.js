@@ -229,4 +229,18 @@
   /* --- Footer year --- */
   var tahun = document.getElementById('tahun');
   if (tahun) tahun.textContent = String(new Date().getFullYear());
+
+  /* --- Tombol kembali ke atas --- */
+  (function () {
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+    function onScroll () {
+      btn.hidden = window.scrollY <= 280;
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
 })();
