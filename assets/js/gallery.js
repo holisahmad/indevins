@@ -12,7 +12,8 @@
     basePath: 'assets/img/',
     prefix: 'gambar-',
     ext: '.jpeg',
-    captionTemplate: function (n) { return 'Gambar ' + n; }
+    captionTemplate: function (n) { return 'Gambar ' + n; },
+    initialCount: 6  // tampil awal: 6 gambar pertama (lebih banyak = scroll lebih panjang)
   };
 
   function buildList () {
@@ -86,6 +87,28 @@
   });
 
   grid.classList.add('is-loaded');
+
+  // batasi tampilan awal (load more)
+  (function () {
+    var moreWrap = document.getElementById('galeri-more-wrap');
+    if (!moreWrap) return;
+    var initial = CONFIG.initialCount || 6;
+    if (list.length > initial) {
+      for (var k = initial; k < grid.children.length; k++) {
+        var child = grid.children[k];
+        if (child) child.classList.add('gallery-item-hidden');
+      }
+      var btn = document.getElementById('galeri-show-more');
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var hiddenItems = grid.querySelectorAll('.gallery-item-hidden');
+          hiddenItems.forEach(function (el) { el.classList.remove('gallery-item-hidden'); });
+          moreWrap.hidden = true;
+          btn.remove();
+        });
+      }
+    }
+  })();
 
   // ---- lightbox ----
   var lightbox = document.createElement('div');

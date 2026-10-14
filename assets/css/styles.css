@@ -1146,6 +1146,12 @@ blockquote p {
 }
 .gallery-caption a:hover { color: var(--color-accent); }
 
+.gallery-more-wrap {
+  text-align: center;
+  margin-top: var(--space-5);
+}
+.gallery-item-hidden { display: none; }
+
 .lightbox {
   position: fixed;
   inset: 0;
