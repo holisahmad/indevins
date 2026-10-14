@@ -107,6 +107,9 @@
           btn.remove();
         });
       }
+    } else {
+      // semua gambar tampil, sembunyikan tombol load more
+      if (moreWrap) moreWrap.hidden = true;
     }
   })();
 
