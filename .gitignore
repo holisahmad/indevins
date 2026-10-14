@@ -1,6 +1,7 @@
 # Folder materi kerja — jangan di-commit (bukan bagian website)
 data/
 UI_Design_Intelligence_Pack/
+materi/
 
 # Sistem & aplikasi
 .DS_Store

@@ -1096,7 +1096,137 @@ blockquote p {
 .badge-open { background: var(--color-ink); color: var(--color-background); }
 .badge-open:hover { background: var(--color-accent-strong); color: #fff; }
 .badge-full { border-color: var(--color-border-strong); background: var(--color-surface); color: var(--color-ink-muted); }
-.jadwal-kosong {
+
+/* ---------- Galeri kegiatan (masonry + lightbox) ---------- */
+.gallery-grid {
+  columns: 3;
+  column-gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  margin-top: var(--space-6);
+  break-inside: avoid;
+}
+.gallery-grid.is-loading { opacity: 0; transition: opacity 300ms var(--ease); }
+.gallery-grid.is-loaded { opacity: 1; }
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: var(--rule);
+  background: var(--color-surface);
+  cursor: zoom-in;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.gallery-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-border-strong);
+  box-shadow: 0 14px 28px -18px rgba(36, 26, 18, 0.5);
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--color-border);
+  transition: filter var(--dur) var(--ease);
+}
+.gallery-item.is-loading img { opacity: 0; }
+.gallery-item.is-loaded img { opacity: 1; transition: opacity 250ms var(--ease); }
+.gallery-caption {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-ink-muted);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3);
+  line-height: 1.45;
+}
+.gallery-caption a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.gallery-caption a:hover { color: var(--color-accent); }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(20, 16, 12, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 220ms var(--ease), visibility 220ms var(--ease);
+}
+.lightbox.is-open { opacity: 1; visibility: visible; }
+.lightbox-img {
+  max-width: 100%;
+  max-height: 92vh;
+  display: block;
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
+  transform: scale(0.96);
+  transition: transform 260ms var(--ease);
+}
+.lightbox.is-open .lightbox-img { transform: scale(1); }
+.lightbox-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--space-4);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-ink-soft);
+}
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--dur) var(--ease);
+  font-size: 1.25rem;
+}
+.lightbox-close:hover,
+.lightbox-nav:hover { background: rgba(255, 255, 255, 0.18); }
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible { outline: 2px solid #E8C996; outline-offset: 2px; }
+.lightbox-close { top: var(--space-3); right: var(--space-3); }
+.lightbox-nav { top: 50%; transform: translateY(-50%); }
+.lightbox-prev { left: var(--space-3); }
+.lightbox-next { right: var(--space-3); }
+
+@media (max-width: 52rem) {
+  .gallery-grid { columns: 2; column-gap: 0.75rem; }
+}
+@media (max-width: 39rem) {
+  .gallery-grid { columns: 1; }
+  .lightbox-nav { width: 2.5rem; height: 2.5rem; }
+  .lightbox-caption { bottom: var(--space-2); font-size: calc(var(--text-xs) - 1px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item,
+  .lightbox-img,
+  .lightbox { transition: none !important; }
+}
+
+/* reduced-motion */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms var(--ease), transform 600ms var(--ease);
+}
+.js .reveal.is-visible { opacity: 1; transform: none; }
   text-align: center;
   padding: var(--space-8) var(--space-5);
   border: 1px dashed var(--color-border-strong);
